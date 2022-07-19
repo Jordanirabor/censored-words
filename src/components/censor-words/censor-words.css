@@ -1,0 +1,81 @@
+:host {
+  display: block;
+}
+
+form {
+  display: flex;
+  max-width: 85%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+textarea {
+  padding: 15px;
+  outline: none;
+  margin: 15px 0px;
+  font-size: 16px;
+}
+
+.keywords {
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div {
+  height: 100vh;
+  display: flex;
+  padding-top: 10%;
+  background: #ccd7dc;
+  justify-content: center;
+}
+
+input {
+  margin: 15px 0px;
+}
+
+input[type='text'] {
+  height: 25px;
+  font-size: 14px;
+  color: #0c2851;
+  font-weight: 400;
+  line-height: 15px;
+  padding: 0px 14px;
+  border-radius: 2px;
+  background: #eaf2f4;
+  border: 1px solid #ccd7dc;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file::before {
+  outline: none;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  background: white;
+  white-space: nowrap;
+  display: inline-block;
+  border: 1px solid #999;
+  content: 'Select .txt doc';
+  text-shadow: 1px 1px #fff;
+}
+
+button {
+  border: none;
+  height: 38px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 15px;
+  border-radius: 20px;
+  border-radius: 4px;
+  background: #0c2851;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+}
