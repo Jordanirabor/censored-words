@@ -1,5 +1,5 @@
 # censored-words
-This web application will remove given keywords and phrases from a document and insert XXXX at the locations where text was removed.
+This web app removes keywords and phrases from given `txt` file and inserts XXXX in the original locations of replaced words.
 
 
 ## How to run
