@@ -5,7 +5,7 @@ describe('censor-words', () => {
     expect(new CensorWords()).toBeTruthy();
   });
 
-  it('masks out a single keywords', () => {
+  it('masks out a single keyword', () => {
     const component = new CensorWords();
     component.value = 'quincy';
     component.txtfile = 'quincy';
@@ -38,6 +38,14 @@ describe('censor-words', () => {
     component.value = "'hey', 'do', 'cars'";
     component.txtfile = 'do you want to be friends? you have some pretty nice cars';
     expect(component.censor()).toEqual('XXXX you want to be friends? you have some pretty nice XXXX');
+  });
+
+
+  it('masks out quoted text within document', () => {
+    const component = new CensorWords();
+    component.value = "'Pepperoni Pizza', beer, you're";
+    component.txtfile = "'Pepperoni Pizza', with beer. Hey you're ignoring me, what gives.";
+    expect(component.censor()).toEqual("'XXXX', with XXXX. Hey XXXX ignoring me, what gives.");
   });
 
   it('masks out double quotes', () => {
