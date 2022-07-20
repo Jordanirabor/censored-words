@@ -12,7 +12,7 @@ export class CensorWords {
   /* collects phrases and keywords into array */
   collectKeywords = (input: string): string[] => {
     const regex = /"([^"]+)"|'([^']+)'|[^,\s]+/g;
-    /* discards the surrounding quotation marks. */
+    // discards the surrounding quotation marks. 
     return input.match(regex).map(e => e.replace(/^"|^'|"|'$/g, ''));
   };
 
@@ -55,11 +55,11 @@ export class CensorWords {
 
   /* prepares censored document and downloads it to filesystem*/
   save = () => {
-    let censored = this.censor();
-    let content = [`${censored}`];
+    const censored = this.censor();
+    const content = [`${censored}`];
 
-    let blob = new Blob(content, { type: 'text/plain' });
-    let hiddenLink = document.createElement('a');
+    const blob = new Blob(content, { type: 'text/plain' });
+    const hiddenLink = document.createElement('a');
 
     hiddenLink.href = URL.createObjectURL(blob);
     hiddenLink.download = 'doc.txt';
