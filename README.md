@@ -1,5 +1,5 @@
 # censored-words
-This web app removes keywords and phrases from given `txt` file and inserts a mask `XXXX` in the original locations of replaced words.
+A web app that removes keywords and phrases from given `txt` file and inserts a mask (`XXXX`) in the original locations of replaced words/phrases.
 
 
 ## How to run
