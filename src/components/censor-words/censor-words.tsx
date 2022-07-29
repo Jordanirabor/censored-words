@@ -17,11 +17,11 @@ export class CensorWords {
   };
 
   /* traverses string and replaces keywords and phrases with a mask */
-  maskOutDocument = (string, input): string => {
+  maskOutDocument = (argument, input): string => {
     const mask = 'XXXX';
     const keywords = this.collectKeywords(input);
     const regex = new RegExp(keywords.join('|'), 'gi');
-    return string.replace(regex, mask);
+    return argument.replace(regex, mask);
   };
 
   /* censors document */
